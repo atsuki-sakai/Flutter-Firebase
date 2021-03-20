@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "536203733958",
+    "project_id": "fullter-firebase",
+    "storage_bucket": "fullter-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536203733958:android:bc913e0754ce1ea424a0c7",
+        "android_client_info": {
+          "package_name": "com.flutter_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536203733958-07bs7fbqpbj7g5f4c97nmulfbvairn26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4203R5rSVn07l66Zh-znkXjqvWDPTH_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536203733958-07bs7fbqpbj7g5f4c97nmulfbvairn26.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
