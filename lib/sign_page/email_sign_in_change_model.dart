@@ -29,7 +29,6 @@ class EmailSignInChangeModel with EmailAndPasswordValidators, ChangeNotifier {
       } else {
         await auth.createUserWithEmailAndPassword(email, password);
       }
-      // Navigator.pop(context);
     } catch (exception) {
       rethrow;
     } finally {

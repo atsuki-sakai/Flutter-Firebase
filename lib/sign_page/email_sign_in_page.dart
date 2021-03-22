@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase/service/auth.dart';
-import 'package:flutter_firebase/sign_page/email_sign_in_form_bloc_base.dart';
 import 'package:flutter_firebase/sign_page/email_sign_in_form_change_notifier.dart';
-import 'package:flutter_firebase/sign_page/email_sign_in_form_stateful.dart';
 
 class EmailSignInPage extends StatelessWidget {
   @override

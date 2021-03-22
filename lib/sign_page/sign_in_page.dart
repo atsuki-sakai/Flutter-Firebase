@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/conponets_widgets/show_alert_dialog.dart';
 import 'package:flutter_firebase/conponets_widgets/show_exception_alert.dart';
-import 'package:flutter_firebase/home_page.dart';
+import 'package:flutter_firebase/home/jobs_page.dart';
 import 'package:flutter_firebase/service/auth.dart';
 import 'package:flutter_firebase/sign_page/email_sign_in_page.dart';
 import 'package:flutter_firebase/sign_page/sign_in_manager.dart';
@@ -103,7 +103,7 @@ class SignInPage extends StatelessWidget {
               imagePath: 'images/google-logo.png',
               text: Text(
                 'Sign in with Google.',
-                style: DefaultButtonStyle(),
+                style: defaultButtonStyle(),
               ),
               onPressed: isLoading
                   ? null
@@ -123,7 +123,7 @@ class SignInPage extends StatelessWidget {
               imagePath: 'images/facebook-logo.png',
               text: Text(
                 'Sign in with atk721.',
-                style: DefaultButtonStyle().copyWith(color: Colors.white),
+                style: defaultButtonStyle().copyWith(color: Colors.white),
               ),
               onPressed: isLoading
                   ? null
@@ -137,7 +137,7 @@ class SignInPage extends StatelessWidget {
                         showSnakBar(context, text: 'User: atk721 => signin.');
                         Navigator.of(context).push(
                           MaterialPageRoute(builder: (context) {
-                            return HomePage();
+                            return JobsPage();
                           }),
                         );
                       } catch (e) {
@@ -156,7 +156,7 @@ class SignInPage extends StatelessWidget {
               onPressed: isLoading ? null : () => _signInEmail(context),
               child: Text(
                 'Sign in with Email',
-                style: DefaultButtonStyle().copyWith(color: Colors.white),
+                style: defaultButtonStyle().copyWith(color: Colors.white),
               ),
             ),
             Container(
@@ -172,7 +172,7 @@ class SignInPage extends StatelessWidget {
               onPressed: isLoading ? null : () => _signInWithAnonymous(context),
               child: Text(
                 'Sign in with Anonymous',
-                style: DefaultButtonStyle().copyWith(color: Colors.white),
+                style: defaultButtonStyle().copyWith(color: Colors.white),
               ),
             ),
           ],
@@ -193,7 +193,7 @@ class SignInPage extends StatelessWidget {
   }
 }
 
-TextStyle DefaultButtonStyle() {
+TextStyle defaultButtonStyle() {
   return TextStyle(
       fontSize: 18.0, fontWeight: FontWeight.w300, color: Colors.black87);
 }

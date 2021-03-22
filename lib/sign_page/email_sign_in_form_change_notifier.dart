@@ -1,15 +1,16 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_firebase/conponets_widgets/form_submit_button.dart';
 import 'package:flutter_firebase/conponets_widgets/show_exception_alert.dart';
+import 'package:flutter_firebase/home/jobs_page.dart';
 import 'package:flutter_firebase/service/auth.dart';
 import 'package:flutter_firebase/sign_page/email_sign_in_change_model.dart';
 import 'package:provider/provider.dart';
 
 class EmailSignInFormChangeNotifier extends StatefulWidget {
-  EmailSignInFormChangeNotifier({@required this.model});
+  EmailSignInFormChangeNotifier({Key key, @required this.model})
+      : super(key: key);
 
   static Widget create(BuildContext context) {
     final auth = Provider.of<AuthBase>(context);
@@ -43,7 +44,6 @@ class _EmailSignInFormChangeNotifierState
 
   @override
   void dispose() {
-    // TODO: implement dispose
     // ! - Controller&FoucsNodeを使うときは、disposeもセットで必要
     _emailController.dispose();
     _passwordController.dispose();
@@ -60,10 +60,17 @@ class _EmailSignInFormChangeNotifierState
 
   void _submit() async {
     try {
-      // ! Firebase_Auth の　エラーをキャッチできない。
-      model.submit();
-      Navigator.pop(context);
-    } on FirebaseAuthException catch (exception) {
+      // ! Firebase_Auth の　エラーをキャッチできない。 awaitがなければcatchしてくれない。
+      await model.submit();
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return JobsPage();
+          },
+        ),
+      );
+    } catch (exception) {
       showExceptionAlertDialog(
         context,
         title: 'Sign in Failed.',
