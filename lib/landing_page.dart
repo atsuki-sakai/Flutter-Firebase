@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase/home/jobs_page.dart';
+import 'package:flutter_firebase/home/jobs/jobs_page.dart';
 import 'package:flutter_firebase/service/auth.dart';
 import 'package:flutter_firebase/service/database.dart';
 import 'package:flutter_firebase/sign_page/sign_in_page.dart';

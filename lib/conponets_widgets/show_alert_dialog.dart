@@ -55,29 +55,16 @@ Future<bool> showAlertDialog(
 
 void showSnakBar(BuildContext context, {@required String text}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-    content: Container(
-      height: 30,
-      width: double.infinity,
-      child: Row(
-        children: [
-          FlutterLogo(
-            size: 20,
-          ),
-          SizedBox(
-            width: 8,
-          ),
-          Text(
-            text,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-        ],
+
+    content: Text(
+      text,
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w300,
+        color: Colors.white,
       ),
     ),
     duration: Duration(seconds: 2),
-    backgroundColor: Colors.grey.shade500,
   ));
 }

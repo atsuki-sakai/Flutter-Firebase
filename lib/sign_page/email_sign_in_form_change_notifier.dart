@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_firebase/conponets_widgets/form_submit_button.dart';
 import 'package:flutter_firebase/conponets_widgets/show_exception_alert.dart';
-import 'package:flutter_firebase/home/jobs_page.dart';
+import 'package:flutter_firebase/home/jobs/jobs_page.dart';
 import 'package:flutter_firebase/service/auth.dart';
 import 'package:flutter_firebase/sign_page/email_sign_in_change_model.dart';
 import 'package:provider/provider.dart';
