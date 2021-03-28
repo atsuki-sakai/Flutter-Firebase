@@ -7,10 +7,14 @@ class JobListTile extends StatelessWidget {
 
   final Job job;
   final VoidCallback onTap;
+  List get dateList => job.id.substring(0, 16).split('T');
   @override
   Widget build(BuildContext context) {
+    final postDay = dateList[0];
+    final postTime = dateList[1];
     return ListTile(
       title: Text(job.name),
+      subtitle: Text('Post: $postDay $postTime'),
       onTap: onTap,
       trailing: Icon(Icons.chevron_right),
     );
